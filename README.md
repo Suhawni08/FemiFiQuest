@@ -1,12 +1,9 @@
-# SheCents-Smart Money Moves for women by women 
+
 
 An fully responsive full stack application designed to educate women and others about finances through an engaging and gamified approach, 
 employing a straightforward and interactive user interface.
 
-- #### [Video](https://docs.google.com/document/d/1LFZds8gGpxqvbzmUiJrv_Giuks4OkgAPU2yHxYEze0c/edit)
-- #### [Flowcharts and User Journey](https://www.canva.com/design/DAGEXtrUxbY/LkioX4T4AaaQtTVLI7klLA/edit)
-- #### [Presentation](https://drive.google.com/file/d/1jdFyVmk5WBM2DYLprDwpdnA7h8HNetPC/view?usp=sharing)
- 
+
 # Screenshots 
 
 ### 1. Landing Page 
@@ -17,9 +14,6 @@ employing a straightforward and interactive user interface.
 ### 2. Login/Signup
 **Login and signup is done by clerk authentication**
 ![image](https://github.com/singh-anushka/SheCents/assets/115483735/dd32a31a-eda4-471f-9a99-5eed16c992f2)
-
-**Security is provided with the help of Two Factor Authentication Process**
-![image](https://github.com/singh-anushka/SheCents/assets/115483735/a8e64c7a-5e4c-4ee3-a5d8-845bd509b4b2)
 
 **Google Auth is also provided**
 ![image](https://github.com/singh-anushka/SheCents/assets/115483735/aa632188-d3a6-432e-96a2-aaff89409aea)
@@ -49,10 +43,7 @@ employing a straightforward and interactive user interface.
 **On Completing the Lesson**
 ![image](https://github.com/singh-anushka/SheCents/assets/115483735/6565eefe-accc-403f-994d-85726debe3d8)
 
-### 4. Leaderboard
-**Compare your performance with other users**
-Whatever progress is made is stored in the database and it displays the various player's performances along with their current quests 
-<img width="1440" alt="Screenshot 2024-05-18 at 11 28 06 AM" src="https://github.com/singh-anushka/SheCents/assets/93376863/fa51540e-e841-4348-a97e-5c0c6f7a5d66">
+
 
 ## Gamified Encouragements and Blankets
 Inorder to boost user interests; the platform is gamefied with hearts and XPs.
@@ -88,129 +79,7 @@ Any further doubts regarding the practicality of the strategy and learnings give
 ![image](https://github.com/singh-anushka/SheCents/assets/115483735/f52dde1e-5d92-4b12-8446-585f26f34029)
 ![image](https://github.com/singh-anushka/SheCents/assets/115483735/9b54f361-0570-4f6c-8677-c391ea6578b3)
 
-# Local Setup
-1. Clone the project into local device and open terminal inside the corresponding folder
-2. Make sure NodeJS is already installed. If not, download from [here](https://nodejs.org/en/download/)
-3. Run the following command in the terminal
-> ` npm install `
-4. Install all the dependencies
-> ` npm install --legacy-peer-deps `
 
-**The project has been successfully installed in the device.**
-5. Create `.env` file in **root** directory.
-6. Contents of `.env`:
-
-```env
-# .env
-
-# disabled next.js telemetry
-NEXT_TELEMETRY_DISABLED=1
-
-# clerk auth keys
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-CLERK_SECRET_KEY=sk_test_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-# neon db uri
-DATABASE_URL="postgresql://<user>:<password>@<host>:<post>/shecents?sslmode=require"
-
-# stripe api key and webhook
-STRIPE_API_SECRET_KEY=sk_test_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-STRIPE_WEBHOOK_SECRET=whsec_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-# public app url
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
-# clerk admin user id(s) separated by comma and space (, )
-CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx, user_xxxxxxxxxxxxxxxxxxxxxx"
-
-```
-
-7. Obtain Clerk Authentication Keys
-
-   1. **Source**: Clerk Dashboard or Settings Page
-   2. **Procedure**:
-      - Log in to your Clerk account.
-      - Navigate to the dashboard or settings page.
-      - Look for the section related to authentication keys.
-      - Copy the `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` provided in that section.
-
-8. Retrieve Neon Database URI
-
-   1. **Source**: Database Provider (e.g., Neon, PostgreSQL)
-   2. **Procedure**:
-      - Access your database provider's platform or configuration.
-      - Locate the database connection details.
-      - Replace `<user>`, `<password>`, `<host>`, and `<port>` placeholders in the URI with your actual database credentials.
-      - Ensure to include `?sslmode=require` at the end of the URI for SSL mode requirement.
-
-9. Fetch Stripe API Key and Webhook Secret
-
-   1. **Source**: Stripe Dashboard
-   2. **Procedure**:
-      - Log in to your Stripe account.
-      - Navigate to the dashboard or API settings.
-      - Find the section related to API keys and webhook secrets.
-      - Copy the `STRIPE_API_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`.
-
-10. Specify Public App URL
-
-   1. **Procedure**:
-      - Replace `http://localhost:3000` with the URL of your deployed application.
-
-11. Identify Clerk Admin User IDs
-
-   1. **Source**: Clerk Dashboard or Settings Page
-   2. **Procedure**:
-      - Log in to your Clerk account.
-      - Navigate to the dashboard or settings page.
-      - Find the section related to admin user IDs.
-      - Copy the user IDs provided, ensuring they are separated by commas and spaces.
-
-12. Save and Secure:
-
-    - Save the changes to the `.env.local` file.
-
-13. Install Project Dependencies using `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
-
-14. Run the Seed Script:
-
-In the same terminal, run the following command to execute the seed script:
-
-```bash
-npm run db:seed
-```
-
-This command uses `npm` to execute the Typescript file (`scripts/seed.ts`) and writes challenges data in database.
-
-15. Verify Data in Database:
-
-Once the script completes, check your database to ensure that the challenges data has been successfully seeded. Now push the data in the database
-```bash
-npm run db:push
-```
-
-16. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `yarn dev`.
-
-**NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
-
-17. To run the project,run the command:
-> ` npm run dev `
-18. Now go to your default browser, and type the following command
-> `http://localhost:3000/ `
-
-*Steps 1-4 are needed for first-time installation only. Only steps 5 onwards will be needed while devolping the project.*
-
-# Team Members
-- #### [Ishpreet Kaur](https://github.com/Ishpreet-Kaur-Bedi)
-- #### [Anushka Singh](https://github.com/singh-anushka)
-- #### [Siddhi Agarwal](https://github.com/siddhi-agarwal25)
-
-
-# Future Modifications 
- - **Google analytics can be used to track the number of users and helps to analyse the data**
- - **Voice feature can be added in the answers to improve the interactivity and accessibility**
- - **Admin Dashboard can be made for performing CRUD operations of the questions and challenges with simple UI**
- - **Feedback section can be build which collects testimonials from the customers**
 
 
 
