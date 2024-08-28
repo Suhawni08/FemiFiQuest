@@ -58,11 +58,6 @@ One of the ways to earn more hearts is through exhausting XPs. Quests are the be
 ![image](https://github.com/singh-anushka/SheCents/assets/115483735/0a50cd9b-e325-4c71-bf2d-702a7e13f6d3)
 
 
-### 6. Shop(Premium)
-To get unlimited hearts is to enter into the Premium tier by a monthly subscription using payment gateway powered by Stripe.
-<img width="1440" alt="Screenshot 2024-05-18 at 10 20 24 AM" src="https://github.com/singh-anushka/SheCents/assets/93376863/24c16afb-e20b-47c2-b4f9-181aa67b6bae">
-<img width="1440" alt="Screenshot 2024-05-18 at 11 10 38 AM" src="https://github.com/singh-anushka/SheCents/assets/93376863/2d1966fa-39e6-42d6-a22f-c584cb975d51">
-
 
 
 ## Doubts?
