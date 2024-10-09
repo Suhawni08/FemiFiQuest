@@ -1,7 +1,4 @@
 
-Here’s a draft for your GitHub README file for the **Interactive Financial Education Web App** project:
-
----
 
 # Interactive Financial Education Web App for Women
 
